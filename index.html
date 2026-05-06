@@ -1,0 +1,59 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Privacy Policy Translator</title>
+  <link rel="stylesheet" href="style.css?v=6">
+</head>
+<body>
+<div class="container">
+  <h1>Privacy Policy Translator</h1>
+  <p class="subtitle">Upload any privacy policy and get a plain-English risk summary, clause highlights, and a visual dashboard.</p>
+
+  <div class="upload-row">
+    <input type="file" id="file" accept=".pdf,.txt">
+    <button id="analyzeBtn" onclick="upload()">Analyze Policy</button>
+  </div>
+
+  <div class="text-input-row">
+    <label for="policyText">Or paste policy text below:</label>
+    <textarea id="policyText" placeholder="Paste a privacy policy paragraph or section here..."></textarea>
+  </div>
+
+  <div id="status" class="status"></div>
+
+  <div id="results" class="results hidden">
+    <section class="card">
+      <h2>Plain English Summary</h2>
+      <div id="summary" class="panel-content">No analysis yet.</div>
+    </section>
+
+    <section class="card dashboard-card">
+      <div>
+        <h2>Risk Score</h2>
+        <div class="score-box"><span id="score">--</span>/100</div>
+        <div id="rating" class="rating">Waiting for upload</div>
+      </div>
+      <div id="charts" class="charts"></div>
+    </section>
+
+    <section class="card">
+      <h2>Top Highlights</h2>
+      <div id="highlights" class="panel-content">No highlights yet.</div>
+    </section>
+
+    <section class="card">
+      <h2>Recommendations</h2>
+      <div id="recommendations" class="panel-content">No recommendations yet.</div>
+    </section>
+
+    <section class="card raw-card">
+      <h2>Raw AI Output</h2>
+      <pre id="output"></pre>
+    </section>
+  </div>
+</div>
+<script src="script.js?v=6"></script>
+</body>
+</html>
